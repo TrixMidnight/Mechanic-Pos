@@ -556,42 +556,49 @@
                 osc.stop(now + 0.03);
             }
 
-            // ---------- DATA (Updated package name) ----------
-            const menuCategories = [{
-                name: "Full Packages", catKey: "package", items: [
-                    { name: "Full Upgrade (All Perf + Visuals + Armor)", price: 650000, type: "package", multiple: false },
-                    { name: "Full Upgrade (No Armor)", price: 550000, type: "package", multiple: false },
-                    { name: "Max Performance + Armor", price: 350000, type: "package", multiple: false },
-                    { name: "Max Performance (No Armor)", price: 250000, type: "package", multiple: false },
-                    { name: "Max Visuals", price: 250000, type: "package", multiple: false },
-                    { name: "PD/EMS Full Upgrades", price: 550000, type: "package", multiple: false, note: "No paint/livery" },
-                    { name: "Limited Vehicles Full Upgrades", price: 200000, type: "package", multiple: false, note: "Underglow, Headlights, Paint, Turbo, Wheel Color, Tag" }
-                ]}, {
-                name: "Visual Upgrades", catKey: "visual", items: [
-                    { name: "Visual Mod", price: 25000, type: "visual", multiple: true, note: "per mod" },
-                    { name: "Full Neons", price: 125000, type: "visual", multiple: false, note: "Install + first color" },
-                    { name: "Headlights", price: 50000, type: "visual", multiple: false, note: "Install + first color" }
-                ]}, {
-                name: "Performance Upgrades", catKey: "perf", items: [
-                    { name: "Engine Upgrade", price: 50000, type: "perf", multiple: false },
-                    { name: "Turbo Upgrade", price: 100000, type: "perf", multiple: false },
-                    { name: "Brakes", price: 30000, type: "perf", multiple: false },
-                    { name: "Transmission", price: 30000, type: "perf", multiple: false },
-                    { name: "Suspension", price: 30000, type: "perf", multiple: false }
-                ]}, {
-                name: "Armor", catKey: "armor", items: [
-                    { name: "Armor", price: 100000, type: "armor", multiple: false, note: "Default Lvl 3; Lvl 5 on request" }
-                ]}, {
-                name: "Repairs", catKey: "repair", items: [
-                    { name: "Vehicle Repair", price: 10000, type: "repair", multiple: true, note: "Full repair, flat rate" },
-                    {
-    name: "Tow Services",catKey: "tow",items: [
+ // ---------- DATA (Updated package name) ----------
+const menuCategories = [{
+    name: "Full Packages", catKey: "package", items: [
+        { name: "Full Upgrade (All Perf + Visuals + Armor)", price: 650000, type: "package", multiple: false },
+        { name: "Full Upgrade (No Armor)", price: 550000, type: "package", multiple: false },
+        { name: "Max Performance + Armor", price: 350000, type: "package", multiple: false },
+        { name: "Max Performance (No Armor)", price: 250000, type: "package", multiple: false },
+        { name: "Max Visuals", price: 250000, type: "package", multiple: false },
+        { name: "PD/EMS Full Upgrades", price: 550000, type: "package", multiple: false, note: "No paint/livery" },
+        { name: "Limited Vehicles Full Upgrades", price: 200000, type: "package", multiple: false, note: "Underglow, Headlights, Paint, Turbo, Wheel Color, Tag" }
+    ]
+}, {
+    name: "Visual Upgrades", catKey: "visual", items: [
+        { name: "Visual Mod", price: 25000, type: "visual", multiple: true, note: "per mod" },
+        { name: "Full Neons", price: 125000, type: "visual", multiple: false, note: "Install + first color" },
+        { name: "Headlights", price: 50000, type: "visual", multiple: false, note: "Install + first color" }
+    ]
+}, {
+    name: "Performance Upgrades", catKey: "perf", items: [
+        { name: "Engine Upgrade", price: 50000, type: "perf", multiple: false },
+        { name: "Turbo Upgrade", price: 100000, type: "perf", multiple: false },
+        { name: "Brakes", price: 30000, type: "perf", multiple: false },
+        { name: "Transmission", price: 30000, type: "perf", multiple: false },
+        { name: "Suspension", price: 30000, type: "perf", multiple: false }
+    ]
+}, {
+    name: "Armor", catKey: "armor", items: [
+        { name: "Armor", price: 100000, type: "armor", multiple: false, note: "Default Lvl 3; Lvl 5 on request" }
+    ]
+}, {
+    name: "Repairs",
+    catKey: "repair",
+    items: [
+        { name: "Vehicle Repair", price: 10000, type: "repair", multiple: true, note: "Full repair, flat rate" }
+    ]
+}, {
+    name: "Tow Services",
+    catKey: "tow",
+    items: [
         { name: "Tow Service", price: 50000, type: "tow", multiple: false, note: "Flat rate tow" }
     ]
-}
+}];
 
-                ]
-            }];
 
             let order = [];
             let sessionTotal = 0;
